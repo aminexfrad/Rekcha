@@ -11,7 +11,6 @@ import {
   UserRound,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
 
 const SignUpPage = () => {
@@ -51,9 +50,9 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
-      {/* left side */}
-      <div className="flex felx-col justify-center items-center p-6 sm:p-12">
+    <div className="min-h-screen flex">
+      {/* Form Side */}
+      <div className="w-full flex items-center justify-center p-6 sm:p-12 bg-base-100">
         <div className="w-full max-w-md space-y-8">
           {/* logo */}
           <div className="text-center mb-8">
@@ -72,7 +71,6 @@ const SignUpPage = () => {
           </div>
 
           {/* form */}
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="form-control">
               <div className="relative">
@@ -162,13 +160,6 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
-
-      {/* right side */}
-
-      <AuthImagePattern
-        title="Join our community"
-        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
-      />
     </div>
   );
 };

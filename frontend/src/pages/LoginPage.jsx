@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore.js";
-import AuthImagePattern from "../components/AuthImagePattern";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, Tangent } from "lucide-react";
 
@@ -19,16 +18,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="h-screen grid lg:grid-cols-2">
-      {/* Left Side - Image */}
-      <AuthImagePattern
-        title={"Welcome back!"}
-        subtitle={
-          "Sign in to continue your conversations and catch up with your messages."
-        }
-      />
-      {/* Right Side - form */}
-      <div className="flex flex-col justify-center items-center p-6 sm:p-12">
+    <div className="min-h-screen flex">
+      {/* Left Side - Form */}
+      <div className="w-full flex items-center justify-center p-6 sm:p-12 bg-base-100">
         <div className="w-full max-w-md space-y-8">
           {/* Logo */}
           <div className="text-center mb-8">
